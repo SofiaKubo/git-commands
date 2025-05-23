@@ -175,3 +175,14 @@ graph LR;
   modified -- "git add" --> staged;
 ```
 
+graph LR;
+  untracked -- "git add" --> staged;
+  staged    -- "git commit"     --> tracked;
+  tracked -- "changes"  --> modified;
+  modified -- "git add" --> staged;
+  tracked -- "git push" --> remote;
+  remote -- "git pull" --> tracked;
+  tracked -- "git merge" --> merge_conflict;
+  merge_conflict -- "resolve" --> tracked;
+
+
