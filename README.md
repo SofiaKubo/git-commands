@@ -175,6 +175,7 @@ graph LR;
   modified -- "git add" --> staged;
 ```
 
+```mermaid
 graph LR;
   untracked -- "git add" --> staged;
   staged    -- "git commit"     --> tracked;
@@ -184,5 +185,6 @@ graph LR;
   remote -- "git pull" --> tracked;
   tracked -- "git merge" --> merge_conflict;
   merge_conflict -- "resolve" --> tracked;
+```
 
 
